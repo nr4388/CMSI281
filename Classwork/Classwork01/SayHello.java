@@ -1,3 +1,14 @@
+/**
+ *  File name     :  SayHello.java
+ *  Purpose       :  Program to ensure a working environment for the semester.
+ *  Author        :  Nicolas Raymundo
+ *  Date          :  2018-09-05
+ *  Description   :  Program
+ *  Notes         :  Uses Scanner class to print hello world with user-given name.
+ *  Warnings      :  None
+ *  Exceptions    :  None
+ */
+
 import java.util.Scanner;
 
 public class SayHello {
