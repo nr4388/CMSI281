@@ -1,12 +1,9 @@
 /**
  *  File name     :  MyFileCopier.java
- *  Purpose       :
+ *  Purpose       :  Program to gain experience with packages and classes as part of a program's functionality.
  *  Author        :  Nicolas Raymundo
- *  Date          :  2018-09-05
- *  Description   :  Program
- *  Notes         :
- *  Warnings      :  None
- *  Exceptions    :  None
+ *  Date          :  2018-09-06
+ *  Notes         :  Uses java.io library to take a user's file and duplicate it.
  */
 
 import java.io.FileReader;
