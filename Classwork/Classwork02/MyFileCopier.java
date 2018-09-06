@@ -6,9 +6,6 @@
  *  Notes         :  Uses java.io library to take a user's file and duplicate it.
  */
 
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Scanner;
 import copiersupport.SourceFile;
 import copiersupport.TargetFile;
