@@ -39,21 +39,11 @@ public class IntList implements IntListInterface {
        }
    }
 
-   // we've gotta have this to actually get things to compile
    public boolean insertValueAtIndex( int value, int index ) {
-       try {
-           for (int i = theList.length - 1; i > index; i--) {
-               System.out.println("i: " + i);
-               System.out.println("list[i]: " + theList[i]);
-               System.out.println("index: " + index);
-               System.out.println("theList[i+1]" + theList[i + 1]);
-               theList[i + 1] = theList[i];
-           }
-           theList[index] = value;
-       } catch(ArrayIndexOutOfBoundsException a) {
-           System.out.println("Index is not valid");
+       for (int i = theList.length - 1; i > index; i--) {
+           theList[i - 1] = theList[i];
        }
-       // System.out.println("value at index: " + theList[index]);
+       theList[index] = value;
        return true;
    }
 
@@ -92,12 +82,9 @@ public class IntList implements IntListInterface {
       list.append( 13 );
       list.append( 17 );
       list.append( 19 );
-      list.insertValueAtIndex(6, 4);
-      System.out.println(list.getValueAtIndex(4));
       System.out.println( list.getValueAtIndex( 7 ) );      // should return the value 19
       System.out.println( list.removeValueAtIndex( 3 ) );   // should return the value 7
       System.out.println( list.getValueAtIndex( 3 ) );      // should return the value 11
       System.out.println( list.getValueAtIndex( 18 ) );     // just to see what happens
-
    }
 }
