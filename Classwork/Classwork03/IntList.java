@@ -1,3 +1,12 @@
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  File name     :  IntList.java
+ *  Purpose       :  Implementing array manipulation to get familiar with arrays in java.
+ *  Author        :  Nicolas Raymundo
+ *  Date          :  09-13-2018
+ *  Description   :  Implemented various methods to expand the array, check the validity of the index, and implemented a method to add values to specific indexes.
+ *  Partner       :  Talia Bahar
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 public class IntList implements IntListInterface {
    private int[] theList;
    private int[] newList;
