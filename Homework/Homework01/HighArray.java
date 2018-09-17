@@ -18,13 +18,10 @@ class HighArray {
 
     public void noDups() {
         boolean duplicates;
-        for (int i = 0; i < nElems; i++) {
-            for (int j = i; j < nElems; j++) {
+        for (int i = nElems - 1; i >= 1; i--) {
+            for (int j = i - 1; j >= 0; j--) {
                 if (a[i] == a[j]) {
-                    duplicates = true;
-                    a[j] = null;
-                } else {
-                    j++;
+                    delete(a[j]);
                 }
             }
         }
@@ -43,10 +40,12 @@ class HighArray {
             return true;
         }
     }
+
     public void insert(long value) {
         a[nElems] = value;
         nElems++;
     }
+
     public boolean delete(long value) {
         int j;
         boolean variable = true;
@@ -65,6 +64,7 @@ class HighArray {
             return variable;
         }
     }
+
     public void display() {
         for(int j=0; j<nElems; j++) {
             System.out.print(a[j] + " ");

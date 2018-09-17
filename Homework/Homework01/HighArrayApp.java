@@ -30,22 +30,35 @@ class HighArrayApp {
         arr.delete(55);
         arr.delete(99);
 
+        arr.display();
+
         System.out.println("Max value: " + arr.getMax());
 
         arr.delete(88);
         arr.insert(80);
+        arr.display();
 
         System.out.println("Max value: " + arr.getMax());
 
         arr.insert(83);
+        arr.display();
 
         System.out.println("Max value: " + arr.getMax());
 
         arr.delete(83);
         arr.delete(80);
 
+        arr.insert(44);
+        arr.insert(77);
+
+        arr.display();
+
         System.out.println("Max value: " + arr.getMax());
 
+        System.out.println("Before noDups: ");
+        arr.display();
+        arr.noDups();
+        System.out.println("After noDups: ");
         arr.display();
     }
 }
