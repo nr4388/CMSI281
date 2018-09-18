@@ -10,6 +10,7 @@ public class IntLinkedListTester {
         myList.prepend(  5 );
         myList.prepend(  3 );
         myList.prepend(  2 );
+        myList.insertAt(3, 69);
         IntLinkedList.Iterator myIt = myList.getIteratorAt( 0 );
         System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 2
         myIt.next();
