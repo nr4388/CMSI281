@@ -1,3 +1,11 @@
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  File name     :  HighArray.java
+ *  Purpose       :  Create methods to manipulate arrays.
+ *  Author        :  Nicolas Raymundo
+ *  Date          :  09-17-2018
+ *  Description   :  Implemented various methods to find values in the array, find and delete duplicates, insert new values, etc.
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 class HighArray {
     private long[] a; // ref to array a
     private int nElems;

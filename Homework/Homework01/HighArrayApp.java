@@ -1,3 +1,11 @@
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  File name     :  HighArrayApp.java
+ *  Purpose       :  Tester for HighArray.java
+ *  Author        :  Nicolas Raymundo
+ *  Date          :  09-17-2018
+ *  Description   :  Tester for HighArray.java to display inserted values, max values, and the total array.
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 class HighArrayApp {
     public static void main(String[] args) {
         int maxSize = 100;
