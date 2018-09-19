@@ -10,7 +10,8 @@ public class IntLinkedListTester {
         myList.prepend(  5 );
         myList.prepend(  3 );
         myList.prepend(  2 );
-        myList.insertAt(3, 69);
+        myList.insertAt(5, 14);
+        myList.insertAt(3, 9990);
         IntLinkedList.Iterator myIt = myList.getIteratorAt( 0 );
         System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 2
         myIt.next();
@@ -19,7 +20,8 @@ public class IntLinkedListTester {
         System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 5
         myIt.next();
         System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 7
-        myIt = myList.getIteratorAt( 3 );
+        // myIt = myList.getIteratorAt( 3 );
+        myIt.next();
         System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 7
         myIt.next();
         System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 11
