@@ -63,10 +63,10 @@ class HighArrayApp {
 
         System.out.println("Max value: " + arr.getMax());
 
-        System.out.println("Before noDups: ");
+        System.out.print("Before noDups: ");
         arr.display();
         arr.noDups();
-        System.out.println("After noDups: ");
+        System.out.print("After noDups: ");
         arr.display();
     }
 }
