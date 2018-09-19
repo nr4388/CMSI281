@@ -11,7 +11,9 @@ public class IntLinkedListTester {
         myList.prepend(  3 );
         myList.prepend(  2 );
         myList.insertAt(5, 14);
-        myList.insertAt(3, 9990);
+        myList.insertAt(6, 9990);
+        myList.removeAt(2);
+        myList.removeAt(4);
         IntLinkedList.Iterator myIt = myList.getIteratorAt( 0 );
         System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 2
         myIt.next();

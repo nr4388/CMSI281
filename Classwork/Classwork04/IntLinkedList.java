@@ -6,6 +6,8 @@ public class IntLinkedList {
    // make new node, insert data, point new node to next one and prev node to new node.
    // removeAt() takes an integer index location ONLY,
    // and removes the node at that index.
+   // find the correct spot in the list,
+   // then point the previous node at the next node.
 
    public void insertAt(int index, int dataValue) {
        int nodeValue = 0;
@@ -23,7 +25,16 @@ public class IntLinkedList {
    }
 
    public void removeAt(int index) {
-       
+       int nodeValue = 0;
+       Iterator nodeTracker = new Iterator();
+       while (nodeTracker.hasNext()) {
+           nodeValue++;
+           nodeTracker.next();
+           if (nodeValue == index - 1) {
+               nodeTracker.currentNode.next = nodeTracker.currentNode.next.next;
+               break;
+           }
+       }
    }
 
    // the constructor
