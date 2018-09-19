@@ -12,31 +12,21 @@ public class IntLinkedList {
    private int  size;
 
    public void insertAt(int index, int dataValue) {
-       int nodeValue = 0;
-       Iterator nodeTracker = new Iterator();
-       while (nodeTracker.hasNext()) {
-           nodeValue++;
-           nodeTracker.next();
-           if (nodeValue == index - 1) {
-               Node newNode = new Node(dataValue);
-               newNode.next = nodeTracker.currentNode.next;
-               nodeTracker.currentNode.next = newNode;
-               break;
-           }
+       if ((index > size - 1) || (index < 0)) {
+           throw new IllegalArgumentException("Index is either too large or too small");
        }
+       Iterator nodeTracker = getIteratorAt(index - 1);
+       Node newNode = new Node(dataValue);
+       newNode.next = nodeTracker.currentNode.next;
+       nodeTracker.currentNode.next = newNode;
    }
 
    public void removeAt(int index) {
-       int nodeValue = 0;
-       Iterator nodeTracker = new Iterator();
-       while (nodeTracker.hasNext()) {
-           nodeValue++;
-           nodeTracker.next();
-           if (nodeValue == index - 1) {
-               nodeTracker.currentNode.next = nodeTracker.currentNode.next.next;
-               break;
-           }
+       if ((index > size - 1) || (index < 0)) {
+           throw new IllegalArgumentException("Index is either too large or too small");
        }
+       Iterator nodeTracker = getIteratorAt(index - 1);
+       nodeTracker.currentNode.next = nodeTracker.currentNode.next.next;
    }
 
    // the constructor
