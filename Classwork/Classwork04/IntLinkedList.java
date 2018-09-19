@@ -1,13 +1,15 @@
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  File name     :  IntLinkedList.java
+ *  Purpose       :  Implementing linked list manipulation to get familiar with linked lists in java.
+ *  Author        :  Nicolas Raymundo
+ *  Date          :  09-18-2018
+ *  Description   :  Implemented various methods to add and remove various nodes from a linked list.
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 public class IntLinkedList {
 
    private Node head;
    private int  size;
-
-   // make new node, insert data, point new node to next one and prev node to new node.
-   // removeAt() takes an integer index location ONLY,
-   // and removes the node at that index.
-   // find the correct spot in the list,
-   // then point the previous node at the next node.
 
    public void insertAt(int index, int dataValue) {
        int nodeValue = 0;

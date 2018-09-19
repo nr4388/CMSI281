@@ -1,3 +1,11 @@
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  File name     :  IntLinkedListTester.java
+ *  Purpose       :  Tester to see if methods for linked list manipulation worked.
+ *  Author        :  Nicolas Raymundo
+ *  Date          :  09-18-2018
+ *  Description   :  Implemented tests to create a linked list and add/remove nodes after creation.
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 public class IntLinkedListTester {
     public static void main( String[] args ) {
         IntLinkedList myList = new IntLinkedList();
