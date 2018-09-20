@@ -27,6 +27,7 @@ public class IntLinkedList {
        }
        Iterator nodeTracker = getIteratorAt(index - 1);
        nodeTracker.currentNode.next = nodeTracker.currentNode.next.next;
+       System.out.println("Index: " + index + ", " + "Value removed: " + nodeTracker.getCurrentInt());
    }
 
    // the constructor

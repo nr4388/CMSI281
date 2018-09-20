@@ -23,7 +23,7 @@ public class IntLinkedListTester {
         myList.insertAt(5, 1414);
         myList.insertAt(7, 3535);
         myList.removeAt(4);
-        // myList.removeAt(9);
+        // myList.removeAt(9); // Will return an error because index 9 is not in list.
         IntLinkedList.Iterator myIt = myList.getIteratorAt( 0 );
         System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 2
         myIt.next();
