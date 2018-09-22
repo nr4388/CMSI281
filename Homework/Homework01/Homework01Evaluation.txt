@@ -1,0 +1,28 @@
+
+Homework01 Evaluation
+======================
+
+Nice job on this assignment, with a couple of comments:
+
+Very nice work on the code.  It shows you are taking the ART
+of programming into account.   Works as advertised.  Good test
+coverage, too.  Consider putting and idea of what the expected
+and actual result values are, listed together in the output as
+a next step.  Keep up the good work!
+
+scores:
+=============================
+HighArray.java
+	coding style                    [1 pt.]
+   getMax() exists                  [1 pt.]
+   noDups() exists                  [1 pt.]
+   compiles                         [1 pt.]
+HighArrayApp.java
+   coding style                     [1 pt.]
+   compiles                         [1 pt.]
+   min 5 new tests for getMax()     [1 pt.]
+   test[s] for noDups               [1 pt.]
+headers in both files               [2 pts.]
+
+
+you got 10 out of 10 which is 100% which is an A-plus
