@@ -22,23 +22,20 @@ public class IntLinkedList {
    }
 
    public int removeAt(int index) {
-       if ((index > size - 1) || (index < 0)) {
+       if (getSize() == 0) {
+           throw new IllegalArgumentException("Linked list is empty.");
+       } else if ((index > size - 1) || (index < 0)) {
            throw new IllegalArgumentException("Index is either too large or too small");
        }
        if (index == 0) {
            Iterator nodeTracker = getIteratorAt(index);
            head = head.next;
            return nodeTracker.getCurrentInt();
-           // System.out.println("Index: " + index + ", " + "Value removed: " + nodeTracker.getCurrentInt());
        } else {
            Iterator nodeTracker = getIteratorAt(index - 1);
            nodeTracker.currentNode.next = nodeTracker.currentNode.next.next;
            return nodeTracker.getCurrentInt();
-           // System.out.println("Index: " + index + ", " + "Value removed: " + nodeTracker.getCurrentInt());
        }
-       // Iterator nodeTracker = getIteratorAt(index - 1);
-       // nodeTracker.currentNode.next = nodeTracker.currentNode.next.next;
-       // System.out.println("Index: " + index + ", " + "Value removed: " + nodeTracker.getCurrentInt());
    }
 
    // the constructor
