@@ -21,13 +21,24 @@ public class IntLinkedList {
        nodeTracker.currentNode.next = newNode;
    }
 
-   public void removeAt(int index) {
+   public int removeAt(int index) {
        if ((index > size - 1) || (index < 0)) {
            throw new IllegalArgumentException("Index is either too large or too small");
        }
-       Iterator nodeTracker = getIteratorAt(index - 1);
-       nodeTracker.currentNode.next = nodeTracker.currentNode.next.next;
-       System.out.println("Index: " + index + ", " + "Value removed: " + nodeTracker.getCurrentInt());
+       if (index == 0) {
+           Iterator nodeTracker = getIteratorAt(index);
+           head = head.next;
+           return nodeTracker.getCurrentInt();
+           // System.out.println("Index: " + index + ", " + "Value removed: " + nodeTracker.getCurrentInt());
+       } else {
+           Iterator nodeTracker = getIteratorAt(index - 1);
+           nodeTracker.currentNode.next = nodeTracker.currentNode.next.next;
+           return nodeTracker.getCurrentInt();
+           // System.out.println("Index: " + index + ", " + "Value removed: " + nodeTracker.getCurrentInt());
+       }
+       // Iterator nodeTracker = getIteratorAt(index - 1);
+       // nodeTracker.currentNode.next = nodeTracker.currentNode.next.next;
+       // System.out.println("Index: " + index + ", " + "Value removed: " + nodeTracker.getCurrentInt());
    }
 
    // the constructor
