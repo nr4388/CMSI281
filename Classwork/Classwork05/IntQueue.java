@@ -7,10 +7,12 @@ public class IntQueue {
          myQueue = new IntLinkedList2();         // constructor
       }
 
+      // Add to front of queue
       public void enQueue(int itemToPush ) {
           myQueue.prepend(itemToPush);
       }
 
+      // Peek at top of the queue
       public int peek() {
           if (myQueue.getSize() == 0) {
               throw new IllegalArgumentException("Queue is empty.");
@@ -19,14 +21,17 @@ public class IntQueue {
           }
       }
 
+      // Remove tail of the queue
       public int deQueue() {
           return myQueue.removeAt( myQueue.getSize() - 1 );
       }
 
+      // Get size of the queue
       public int getSize() {
           return myQueue.getSize();
       }
 
+      // Testers
       public static void main( String[] args ) {
          IntQueue testStack = new IntQueue();
          testStack.enQueue( 222 );
