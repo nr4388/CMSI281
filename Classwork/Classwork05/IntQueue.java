@@ -97,6 +97,7 @@ public class IntQueue {
          System.out.println("Removed value is " + testStack.deQueue() );    // 47
          System.out.println("The new size of the stack is " + testStack.getSize() + "\n" );    // 2
 
+         System.out.println("Added " + 123456789 + " to the queue." + "\n");
          testStack.enQueue( 123456789 ); // new top of the queue
 
          System.out.println("The top of the queue is " + testStack.peek() );    // 123456789
@@ -114,6 +115,7 @@ public class IntQueue {
          System.out.println("Removed value is " + testStack.deQueue() );    // 123456789
          System.out.println("The new size of the stack is " + testStack.getSize() + "\n" );    // 0
 
+         System.out.println("Added " + 111 + " to the queue." + "\n");
          testStack.enQueue( 111 ); // new top of the queue
 
          System.out.println("The top of the queue is " + testStack.peek() );    // 111
