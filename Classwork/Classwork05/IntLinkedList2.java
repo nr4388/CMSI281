@@ -6,7 +6,7 @@
  *  Description   :  Implemented various methods to add and remove various nodes from a linked list.
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-public class IntLinkedList {
+public class IntLinkedList2 {
 
    private Node head;
    public int  size;
@@ -29,22 +29,23 @@ public class IntLinkedList {
 
    public int removeAt(int index) {
        if (getSize() == 0) {
-           throw new IllegalArgumentException("Linked list is empty.");
+           throw new IllegalArgumentException("Queue is empty!");
        } else if ((index > size - 1) || (index < 0)) {
-           throw new IllegalArgumentException("Index is either too large or too small");
+           throw new IllegalArgumentException("Index is either too large or too small.");
        }
-       if (index == 0) {
+       // if (index == 0) {
+       //     Iterator nodeTracker = getIteratorAt(index);
+       //     head = null;
+       //     size--;
+       //     return nodeTracker.getCurrentInt();
+       //     // return nodeTracker.getCurrentInt();
+       // } else {
            Iterator nodeTracker = getIteratorAt(index);
-           head = null;
-           size--;
-           return 0;
-           // return nodeTracker.getCurrentInt();
-       } else {
-           Iterator nodeTracker = getIteratorAt(index - 1);
+           // System.out.println(nodeTracker.getCurrentInt());
            nodeTracker.currentNode.next = null;
            size--;
            return nodeTracker.getCurrentInt();
-       }
+       // }
        // if (index == 0) {
        //     Iterator nodeTracker = getIteratorAt(index);
        //     head = head.next;
@@ -57,7 +58,7 @@ public class IntLinkedList {
    }
 
    // the constructor
-   IntLinkedList() {
+   IntLinkedList2() {
       head = null;
       size = 0;
    }
