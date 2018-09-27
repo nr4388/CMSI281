@@ -1,3 +1,11 @@
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  File name     :  IntQueue.java
+ *  Purpose       :  Class for IntQueue to get familiar with how queues work.
+ *  Author        :  Nicolas Raymundo
+ *  Date          :  09-27-2018
+ *  Description   :  Edited enQueue, peek, and deQueue methods to remove nodes from the front and add to the end.
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 public class IntQueue {
 
       IntLinkedList2 myQueue;
@@ -7,7 +15,7 @@ public class IntQueue {
          myQueue = new IntLinkedList2();         // constructor
       }
 
-      // Add to front of queue
+      // Add to end of queue
       public void enQueue(int itemToPush ) {
           myQueue.prepend(itemToPush);
       }
@@ -22,7 +30,7 @@ public class IntQueue {
           }
       }
 
-      // Remove tail of the queue
+      // Remove front of the queue
       public int deQueue() {
           return myQueue.removeAt( myQueue.getSize() - 1 );
           // return myQueue.removeAt( 0 );

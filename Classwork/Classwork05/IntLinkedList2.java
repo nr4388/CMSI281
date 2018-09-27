@@ -1,9 +1,9 @@
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  *  File name     :  IntLinkedList.java
- *  Purpose       :  Implementing linked list manipulation to get familiar with linked lists in java.
+ *  Purpose       :  Implementing linked list manipulation to get familiar with linked lists in java. But not using as a class for queues.
  *  Author        :  Nicolas Raymundo
- *  Date          :  09-18-2018
- *  Description   :  Implemented various methods to add and remove various nodes from a linked list.
+ *  Date          :  09-27-2018
+ *  Description   :  Edited various methods to now work with queues.
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 public class IntLinkedList2 {

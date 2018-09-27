@@ -1,9 +1,9 @@
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- *  File name     :  IntLinkedListTester.java
- *  Purpose       :  Tester to see if methods for linked list manipulation worked.
+ *  File name     :  IntLinkedListTester2.java
+ *  Purpose       :  Tester for IntLinkedList. Same as last week.
  *  Author        :  Nicolas Raymundo
- *  Date          :  09-18-2018
- *  Description   :  Implemented tests to create a linked list and add/remove nodes after creation.
+ *  Date          :  09-27-2018
+ *  Description   :  Same tester as last week. Using for IntQueue now.
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 public class IntLinkedListTester2 {
