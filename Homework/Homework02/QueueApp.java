@@ -1,6 +1,6 @@
 public class QueueApp {
     public static void main(String[] args) {
-        Queue theQueue = new Queue(10);           // queue holds 5 items
+        Queue theQueue = new Queue(10);           // queue holds 10 items
         theQueue.insert(10);
         theQueue.insert(20);
         theQueue.insert(30);
