@@ -18,6 +18,35 @@ public class DequeApp {
         theDeque.insertRight(13);
         theDeque.insertLeft(11);
         theDeque.insertRight(14);
+        theDeque.insertRight(15);
+        theDeque.insertRight(16);
+        theDeque.insertLeft(12);
+        theDeque.insertLeft(11);
+        theDeque.insertLeft(10);
+        theDeque.insertRight(14);
+        theDeque.insertRight(15);
+
+        theDeque.removeRight();
+
+        theDeque.insertRight(15);
+
+        theDeque.removeLeft();
+
+        theDeque.insertLeft(12);
+        theDeque.insertRight(16);
+        theDeque.insertLeft(12);
+        theDeque.insertLeft(11);
+        theDeque.insertLeft(10);
+        theDeque.insertRight(14);
+        theDeque.insertLeft(10);
+
+        // theDeque.removeRight();  // Breaks here
+        // theDeque.removeRight();
+        // theDeque.removeRight();
+        // theDeque.removeRight();
+        //
+        // theDeque.insertLeft(12);
+        // theDeque.insertRight(13);
 
 
         // theDeque.removeLeft();

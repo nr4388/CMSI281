@@ -26,9 +26,9 @@ public class Deque {
     public void insertLeft(long j) {          // put item at front of queue
         if (rear == maxSize - 1) {
             removeRight();
-            rear = -1;
+            // rear--;
         }
-        for (int i = nItems; i > front; i--) {
+        for (int i = maxSize - 1; i > front; i--) {
             dequeArray[i] = dequeArray[i - 1];
         }
         dequeArray[front] = j;
@@ -41,7 +41,7 @@ public class Deque {
         if (rear == maxSize - 1) {
             rear--;
         }
-        for (int i = 0; i < nItems - 1; i++) {
+        for (int i = 0; i < maxSize - 1; i++) {
             dequeArray[i] = dequeArray[i + 1];
         }
         nItems--;
