@@ -47,11 +47,11 @@ public class Queue {
         return nItems;
     }
 
-  public void displayQueueContent() {
-      for (int i = 0; i < nItems; i++) {
-          System.out.println("List: " + queArray[(front + i) % nItems]);
-      }
-  }
+    public void displayQueueContent() {
+        for (int i = 0; i < nItems; i++) {
+            System.out.println("List: " + queArray[(front + i) % nItems]);
+        }
+    }
 
 
 }
