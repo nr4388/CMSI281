@@ -38,21 +38,17 @@ public class Deque {
 
     public long removeLeft() {                // take item from front of queue
         long temp = dequeArray[front];
-        if (rear == maxSize - 1) {
-            rear--;
-        }
         for (int i = 0; i < maxSize - 1; i++) {
             dequeArray[i] = dequeArray[i + 1];
         }
+        rear--;
         nItems--;
         return temp;
     }
 
     public long removeRight() {                // take item from back of queue
         long temp = dequeArray[rear];
-        if (rear == maxSize - 1) {
-            rear--;
-        }
+        rear--;
         nItems--;
         return temp;
     }
