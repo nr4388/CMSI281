@@ -52,7 +52,9 @@ public class DequeApp {
         theDeque.insertLeft(11);
         theDeque.insertRight(14);   // 11, 12, 13, 14
 
-        System.out.print("Is the deque full? " + theDeque.isFull());
+        // System.out.println("Is the deque empty? " + theDeque.isEmpty());  // False
+
+        System.out.print("Is the deque full? " + theDeque.isFull());    // true
 
         System.out.println( " ");
         while( !theDeque.isEmpty() ) {           //remove and display all items
