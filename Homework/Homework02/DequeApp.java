@@ -52,7 +52,7 @@ public class DequeApp {
         theDeque.insertLeft(11);
         theDeque.insertRight(14);   // 11, 12, 13, 14
 
-        // System.out.println("Is the deque empty? " + theDeque.isEmpty());  // False
+        System.out.println("Is the deque empty? " + theDeque.isEmpty());  // False
 
         System.out.print("Is the deque full? " + theDeque.isFull());    // true
 
@@ -63,5 +63,6 @@ public class DequeApp {
             System.out.print(" ");
         }
         System.out.println("");
+
     }
 }
