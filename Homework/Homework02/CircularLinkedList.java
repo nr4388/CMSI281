@@ -12,12 +12,13 @@ public class CircularLinkedList {
             Node newNode = new Node(dataValue);
             current = newNode;
             size++;
+        } else {
+            Iterator pointer = getIteratorAt(getSize() - 1);
+            Node newNode = new Node(dataValue);
+            pointer.currentNode.next = newNode;
+            newNode.next = current;
+            size++;
         }
-        Iterator pointer = getIteratorAt(0);
-        Node newNode = new Node(dataValue);
-        newNode.next = pointer.currentNode.next;
-        pointer.currentNode.next = newNode;
-        size++;
     }
 
     public void remove(int index) {
