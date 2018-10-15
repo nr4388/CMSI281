@@ -26,21 +26,21 @@ public class CircularLinkedListTester {
 
         CircularLinkedList.Iterator myIt = myList.getIteratorAt( 0 );
         System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 23
-        myIt.next();
+        myIt.step();
         System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 12
-        myIt.next();
+        myIt.step();
         System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 99
-        myIt.next();
+        myIt.step();
         System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 123
-        myIt.next();
+        myIt.step();
         System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 74
-        myIt.next();
+        myIt.step();
         System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 23
-        myIt.next();
+        myIt.step();
         System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 12
-        myIt.next();
+        myIt.step();
         System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 99
-        myIt.next();
+        myIt.step();
         System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 123
     }
 }

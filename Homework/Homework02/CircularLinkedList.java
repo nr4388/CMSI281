@@ -21,18 +21,29 @@ public class CircularLinkedList {
     }
 
     public void delete() {
-        Iterator pointer = getIteratorAt(getSize() - 2);
-        pointer.currentNode.next = pointer.currentNode.next.next;
-        size--;
+        if (getSize() == 1) {
+            current = null;
+            size--;
+        } else {
+            Iterator pointer = getIteratorAt(getSize() - 2);
+            pointer.currentNode.next = pointer.currentNode.next.next;
+            size--;
+        }
     }
 
     // ASK WHAT TO DO IF WE ARE SEARCHING FOR AN INDEX > SIZE
     public int search(int index) {
+        if (getSize() == 0) {
+            throw new IllegalArgumentException("Linked list is empty.");
+        }
         Iterator pointer = getIteratorAt(index);
         return pointer.getCurrentInt();
     }
 
     public String display() {
+        if (getSize() == 0) {
+            return null;
+        }
         String list = "";
         Iterator pointer = getIteratorAt(0);
         for (int i = 0; i < getSize(); i++) {
@@ -41,24 +52,13 @@ public class CircularLinkedList {
             } else {
                 list += (pointer.getCurrentInt());
             }
-            pointer.next();
+            pointer.step();
         }
         return list;
     }
 
     public int getSize() {
         return size;
-    }
-
-    public int getNodeIndex() {
-        int counter = 0;
-        for (int i = 0; i < getSize(); i++) {
-            Iterator it = new Iterator();
-            while (it.hasNext()) {
-                counter++;
-            }
-        }
-        return counter;
     }
 
     private class Node {
@@ -79,7 +79,7 @@ public class CircularLinkedList {
           currentNode = current;
        }
 
-       public void next() {
+       public void step() {
           if( currentNode == null ) {
              return;
           } else {
@@ -103,7 +103,7 @@ public class CircularLinkedList {
        }
        Iterator it = new Iterator();
        while( index > 0 ) {
-          it.next();
+          it.step();
           index--;
        }
        return it;
