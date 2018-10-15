@@ -47,6 +47,9 @@ class Stack {
     }
 
     public void peek() {
+        if (getSize() == 0) {
+            throw new IllegalArgumentException("Stack is empty.");
+        }
         System.out.print("Top of the stack: ");
         Link current = first;
         current.displayLink();
