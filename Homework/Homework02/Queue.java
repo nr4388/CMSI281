@@ -49,7 +49,7 @@ public class Queue {
 
     public void displayQueueContent() {
         for (int i = 0; i < nItems; i++) {
-            System.out.println("List: " + queArray[(front + i) % nItems]);
+            System.out.println("Element: " + queArray[(front + i) % nItems]);
         }
     }
 
