@@ -8,20 +8,21 @@ public class CircularLinkedList {
     }
 
     public void insert(int dataValue) {
+        Node newNode = new Node(dataValue);
         if (getSize() == 0) {
-            Node newNode = new Node(dataValue);
             current = newNode;
-            size++;
+            newNode.next = newNode;
         } else {
             Iterator pointer = getIteratorAt(getSize() - 1);
-            Node newNode = new Node(dataValue);
             pointer.currentNode.next = newNode;
             newNode.next = current;
-            size++;
         }
+        size++;
     }
 
-    public void remove(int index) {
+    public void delete() {
+        Iterator pointer = getIteratorAt(getSize() - 2);
+        pointer.currentNode.next = pointer.currentNode.next.next;
     }
 
     public int getSize() {
