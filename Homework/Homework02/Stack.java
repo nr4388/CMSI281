@@ -37,15 +37,6 @@ class Stack {
         size++;
     }
 
-    // public long deleteLast() {
-    //     long temp = first.dData;
-    //     if (first.next == null) {
-    //         last = null;
-    //     }
-    //     first = first.next;
-    //     return temp;
-    // }
-
     public void pop() {
         if (getSize() == 0) {
             throw new IllegalArgumentException("Stack is empty.");
@@ -55,12 +46,19 @@ class Stack {
         size--;
     }
 
+    public void peek() {
+        System.out.print("Top of the stack: ");
+        Link current = first;
+        current.displayLink();
+        System.out.println("");
+    }
+
     public int getSize() {
         return size;
     }
 
     public void displayList() {
-        System.out.print("Stack (Back to front): ");
+        System.out.print("Stack (Front to back): ");
         Link current = first;
         while (current != null) {
             current.displayLink();
