@@ -23,6 +23,27 @@ public class CircularLinkedList {
     public void delete() {
         Iterator pointer = getIteratorAt(getSize() - 2);
         pointer.currentNode.next = pointer.currentNode.next.next;
+        size--;
+    }
+
+    // ASK WHAT TO DO IF WE ARE SEARCHING FOR AN INDEX > SIZE
+    public int search(int index) {
+        Iterator pointer = getIteratorAt(index);
+        return pointer.getCurrentInt();
+    }
+
+    public String display() {
+        String list = "";
+        Iterator pointer = getIteratorAt(0);
+        for (int i = 0; i < getSize(); i++) {
+            if (i < (getSize() - 1)) {
+                list += (pointer.getCurrentInt() + ", ");
+            } else {
+                list += (pointer.getCurrentInt());
+            }
+            pointer.next();
+        }
+        return list;
     }
 
     public int getSize() {
@@ -77,7 +98,7 @@ public class CircularLinkedList {
     }
 
     public Iterator getIteratorAt( int index ) {
-       if( (index > size) || (index < 0) ) {
+       if( (index > getSize() - 1) || (index < 0) ) {
           throw new IllegalArgumentException();
        }
        Iterator it = new Iterator();

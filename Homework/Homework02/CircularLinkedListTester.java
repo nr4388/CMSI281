@@ -7,7 +7,23 @@ public class CircularLinkedListTester {
         myList.insert( 123 );
         myList.insert( 74 );
         myList.insert( 63 );
+        myList.insert( 22 );
+
+        System.out.println("Current Circular Linked List: " + myList.display());   // 23, 12, 99, 123, 74, 63, 22
+
         myList.delete();
+        myList.delete();
+
+        System.out.println("Current Circular Linked List: " + myList.display() + "\n");   // 23, 12, 99, 123, 74
+
+        System.out.println("Zero index is: " + myList.search(0));   // 23
+        System.out.println("One index is: " + myList.search(1));   // 12
+        System.out.println("Two index is: " + myList.search(2));   // 99
+        System.out.println("Three index is: " + myList.search(3));   // 123
+        System.out.println("Four index is: " + myList.search(4) + "\n");   // 74
+        // System.out.println("Five index is: " + myList.search(5));   // 23
+        // System.out.println("Six index is: " + myList.search(6) + "\n");   // 12
+
         CircularLinkedList.Iterator myIt = myList.getIteratorAt( 0 );
         System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 23
         myIt.next();
@@ -20,5 +36,11 @@ public class CircularLinkedListTester {
         System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 74
         myIt.next();
         System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 23
+        myIt.next();
+        System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 12
+        myIt.next();
+        System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 99
+        myIt.next();
+        System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 123
     }
 }
