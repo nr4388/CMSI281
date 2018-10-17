@@ -35,7 +35,7 @@ public class QueueApp {
         theQueue.displayQueueContent();          // 40 50 60 70
         System.out.println( " ");
         while( !theQueue.isEmpty() ) {           //remove and display all items
-            long n = theQueue.remove();            // (40, 50, 60, 70, 80, 90, 100, 110, 120, 130)
+            long n = theQueue.remove();          // (40, 50, 60, 70, 80, 90, 100, 110, 120, 130)
             System.out.print(n);
             System.out.print(" ");
         }
