@@ -22,10 +22,11 @@ public class Queue {
     }
 
     public long remove() {                // take item from front of queue
-        long temp = queArray[front++];
-        if(front == maxSize) {
-            front = 0;
+        long temp = queArray[front];
+        for (int i = 0; i < nItems - 1; i++) {
+            queArray[i] = queArray[i + 1];
         }
+        rear--;
         nItems--;
         return temp;
     }
