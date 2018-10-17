@@ -1,3 +1,11 @@
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  File name     :  DequeApp.java
+ *  Purpose       :  Created a deque tester file.
+ *  Author        :  Nicolas Raymundo
+ *  Date          :  10-17-2018
+ *  Description   :  Calling methods on a deque to test deque class.
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 public class DequeApp {
     public static void main(String[] args) {
         Deque theDeque = new Deque(4);           // queue holds 4 items
