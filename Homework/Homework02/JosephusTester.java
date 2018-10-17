@@ -5,11 +5,16 @@ public class JosephusTester {
         myList.insert( 2 );
         myList.insert( 3 );
         myList.insert( 4 );
-        myList.insert( 5 );
-        myList.insert( 6 );
-        myList.insert( 7 );
 
-        System.out.println(myList.suicideCircle(7, 4, 1));
+        System.out.println(myList.suicideCircle(4, 3, 2));
+
+        // myList.deleteAt(1);
+        // myList.deleteAt(1);
+
+        // System.out.println(myList.search(0));
+        // System.out.println(myList.search(1));
+        // System.out.println(myList.search(2));
+        // System.out.println(myList.search(3));
 
         // System.out.println(myList.search(7));
         // System.out.println(myList.search(8));
@@ -22,11 +27,17 @@ public class JosephusTester {
 
         // myList.suicideCircle(7, 4, 1);
 
-        Josephus.Iterator myIt = myList.getIteratorAt( 0 );
-        System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 23
-        myIt.step();
-        System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 12
-        myIt.step();
-        System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 99
+        // Josephus.Iterator myIt = myList.getIteratorAt( 0 );
+        // System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 23
+        // myIt.step();
+        // System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 12
+        // myIt.step();
+        // System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 99
+        // myIt.step();
+        // System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 99
+        // myIt.step();
+        // System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 99
+        // myIt.step();
+        // System.out.println( "Current Node is: " + myIt.getCurrentInt() );   // 99
     }
 }

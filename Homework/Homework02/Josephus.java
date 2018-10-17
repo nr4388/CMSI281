@@ -31,26 +31,46 @@ public class Josephus {
         }
     }
 
-    public String suicideCircle(int numberOfPeople, int interval, int startingPerson) {
-        // Josephus myCircle = new Josephus();
-        // for (int i = 0; i < numberOfPeople; i++) {
-        //     myCircle.insert(9);
-        // }
-        int number = interval - 1;
-        String eliminatedPeople = "";
-        if (getSize() == 0) {
-            throw new IllegalArgumentException("Linked list is empty.");
-        } else {
-            while (getSize() > 1) {
-                eliminatedPeople += (search(number) + " ");
-                number += 2;
-                size--;
-            }
-        }
-        return eliminatedPeople;
+    public void deleteAt(int index) {
+        Iterator pointer = getIteratorAt(index - 1);
+        pointer.currentNode.next = pointer.currentNode.next.next;
     }
 
-    // ASK WHAT TO DO IF WE ARE SEARCHING FOR AN INDEX > SIZE
+    public String suicideCircle(int numberOfPeople, int interval, int startingPerson) {
+        String string = "";
+        Josephus myCircle = new Josephus();
+        for (int i = 1; i <= numberOfPeople; i++) {
+            myCircle.insert(i);
+            size++;
+        }
+        Iterator pointer = myCircle.getIteratorAt(0);
+        System.out.println("Starting Size: " + myCircle.getSize());
+        while (myCircle.getSize() > 1) {
+            System.out.println("\n" + "Decrementing Size: " + myCircle.getSize() + "\n");
+                for (int j = 0; j <= interval; j++) {
+                    if (pointer.getCurrentInt() == 0 && (j != 0)) {
+                        System.out.println("Int is 0 so next");
+                        pointer.step();
+                    }
+                    if (j == interval) {
+                        if (pointer.getCurrentInt() == 0) {
+                            System.out.println("Int is 0 so next");
+                            pointer.step();
+                        }
+                        System.out.println("j: " + j + " int data: " + pointer.getCurrentInt() + " True");
+                        string += (pointer.getCurrentInt() + " ");
+                        pointer.currentNode.data = 0;
+                        size--;
+                    } else {
+                        System.out.println("j: " + j + " int data: " + pointer.getCurrentInt());
+                        pointer.step();
+                    }
+                }
+                myCircle.size--;
+        }
+        return string;
+    }
+
     public int search(int index) {
         if (getSize() == 0) {
             throw new IllegalArgumentException("Linked list is empty.");
