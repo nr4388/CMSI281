@@ -36,39 +36,42 @@ public class Josephus {
         pointer.currentNode.next = pointer.currentNode.next.next;
     }
 
-    public String suicideCircle(int numberOfPeople, int interval, int startingPerson) {
-        String string = "";
+    public String elimination(int numberOfPeople, int interval) {
+        String eliminated = "The list, in order of elimination: ";
+        String result = "Playing the Josephus Problem with " + numberOfPeople + " people, eliminating at an interval of " + interval + ", the last man standing is: " ;
         Josephus myCircle = new Josephus();
         for (int i = 1; i <= numberOfPeople; i++) {
             myCircle.insert(i);
-            size++;
+            myCircle.size++;
         }
         Iterator pointer = myCircle.getIteratorAt(0);
-        System.out.println("Starting Size: " + myCircle.getSize());
-        while (myCircle.getSize() > 1) {
-            System.out.println("\n" + "Decrementing Size: " + myCircle.getSize() + "\n");
-                for (int j = 0; j <= interval; j++) {
-                    if (pointer.getCurrentInt() == 0 && (j != 0)) {
-                        System.out.println("Int is 0 so next");
-                        pointer.step();
-                    }
-                    if (j == interval) {
+        while (myCircle.getSize() > 2) {
+                for (int j = 0; j < interval; j++) {
+                    for (int k = 0; k < numberOfPeople; k++) {
                         if (pointer.getCurrentInt() == 0) {
-                            System.out.println("Int is 0 so next");
-                            pointer.step();
+                        pointer.step();
                         }
-                        System.out.println("j: " + j + " int data: " + pointer.getCurrentInt() + " True");
-                        string += (pointer.getCurrentInt() + " ");
+                    }
+                    if (j == (interval - 1)) {
+                        eliminated += (pointer.getCurrentInt() + " ");
                         pointer.currentNode.data = 0;
-                        size--;
+                        myCircle.size--;
+                        // myCircle.size--;
+                        pointer.step();
                     } else {
-                        System.out.println("j: " + j + " int data: " + pointer.getCurrentInt());
                         pointer.step();
                     }
                 }
                 myCircle.size--;
         }
-        return string;
+        if (myCircle.getSize() == 2) {
+            for (int i = 0; i < numberOfPeople; i++) {
+                if (myCircle.search(i) != 0) {
+                    System.out.println((result += myCircle.search(i)));
+                }
+            }
+        }
+        return eliminated;
     }
 
     public int search(int index) {
