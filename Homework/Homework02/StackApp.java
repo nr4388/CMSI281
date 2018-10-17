@@ -1,4 +1,12 @@
-class StackApp {
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  File name     :  StackApp.java
+ *  Purpose       :  Created a test file for stack class.
+ *  Author        :  Nicolas Raymundo
+ *  Date          :  10-17-2018
+ *  Description   :  Called methods on stack class to test whether or not they work.
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+ class StackApp {
     public static void main(String[] args) {
         Stack theList = new Stack();
 

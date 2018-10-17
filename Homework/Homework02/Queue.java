@@ -1,4 +1,12 @@
-public class Queue {
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  File name     :  Queue.java
+ *  Purpose       :  Edited a queue class to display all elements.
+ *  Author        :  Nicolas Raymundo
+ *  Date          :  10-17-2018
+ *  Description   :  Added display method to be able to show elements of the queue.
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+ public class Queue {
     private int maxSize;
     private long[] queArray;
     private int front;

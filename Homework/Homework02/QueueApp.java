@@ -1,3 +1,11 @@
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  File name     :  QueueApp.java
+ *  Purpose       :  Test file to test queue class display method.
+ *  Author        :  Nicolas Raymundo
+ *  Date          :  10-17-2018
+ *  Description   :  Called display method on queue class to test if it works.
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 public class QueueApp {
     public static void main(String[] args) {
         Queue theQueue = new Queue(5);           // queue holds 5 items

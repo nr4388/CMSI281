@@ -1,4 +1,12 @@
-class Link {
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  File name     :  StackApp.java
+ *  Purpose       :  Created a stack class.
+ *  Author        :  Nicolas Raymundo
+ *  Date          :  10-17-2018
+ *  Description   :  Added methods to be able to push/pop/peek on the stack.
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+ class Link {
     public long data;
     public Link next;
 
