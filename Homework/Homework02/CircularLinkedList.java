@@ -1,3 +1,11 @@
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  File name     :  CircularLinkedList.java
+ *  Purpose       :  Created a circular linked list class.
+ *  Author        :  Nicolas Raymundo
+ *  Date          :  10-17-2018
+ *  Description   :  Added methods to be able to insert/delete/search/display/get size.
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 public class CircularLinkedList {
     private Node current;
     private int size;
@@ -31,7 +39,6 @@ public class CircularLinkedList {
         }
     }
 
-    // ASK WHAT TO DO IF WE ARE SEARCHING FOR AN INDEX > SIZE
     public int search(int index) {
         if (getSize() == 0) {
             throw new IllegalArgumentException("Linked list is empty.");
@@ -98,7 +105,8 @@ public class CircularLinkedList {
     }
 
     public Iterator getIteratorAt( int index ) {
-       if( (index > getSize() - 1) || (index < 0) ) {
+       // if( (index > getSize() - 1) || (index < 0) ) {
+       if (index < 0) {
           throw new IllegalArgumentException();
        }
        Iterator it = new Iterator();
