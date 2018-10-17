@@ -4,6 +4,8 @@ public class Deque {
     private int front;
     private int rear;
     private int nItems;
+    private boolean leftOpen;
+    private boolean rightOpen;
 
     public Deque(int s) {   //constructor
         maxSize = s;
@@ -11,45 +13,82 @@ public class Deque {
         front = 0;
         rear = -1;
         nItems = 0;
-    }
-
-    public void insertRight(long j) {          // put item at rear of queue
-        if (rear == maxSize - 1) {
-            removeLeft();
-            // rear--;
-        }
-        rear++;
-        dequeArray[rear] = j;
-        nItems++;
+        leftOpen = true;
+        rightOpen = true;
     }
 
     public void insertLeft(long j) {          // put item at front of queue
-        if (rear == maxSize - 1) {
-            removeRight();
-            // rear--;
+        if (nItems == maxSize) {
+            System.out.println("Deque is full. Please remove first");
+        } else if (leftOpen == false){
+            insertRight(j);
+        } else if (nItems == (maxSize - 1)) {
+            leftOpen = false;
+            for (int i = maxSize - 1; i > front; i--) {
+                dequeArray[i] = dequeArray[i - 1];
+            }
+            dequeArray[front] = j;
+            nItems++;
+            rear++;
         }
-        for (int i = maxSize - 1; i > front; i--) {
-            dequeArray[i] = dequeArray[i - 1];
+        else {
+            for (int i = maxSize - 1; i > front; i--) {
+                dequeArray[i] = dequeArray[i - 1];
+            }
+            dequeArray[front] = j;
+            nItems++;
+            rear++;
         }
-        dequeArray[front] = j;
-        nItems++;
-        rear++;
+    }
+
+    public void insertRight(long j) {          // put item at rear of queue
+        if (nItems == maxSize) {
+            System.out.println("Deque is full. Please remove first");
+        } else if (rightOpen == false && leftOpen == true) {
+            insertLeft(j);
+        } else if ((nItems == (maxSize - 1)) && (rightOpen == true)) {
+            rightOpen = false;
+            rear++;
+            dequeArray[rear] = j;
+            nItems++;
+            System.out.println(rightOpen);
+        } else {
+            rear++;
+            dequeArray[rear] = j;
+            nItems++;
+        }
     }
 
     public long removeLeft() {                // take item from front of queue
+        if (nItems == maxSize) {
+            leftOpen = true;
+            rightOpen = false;
+        }
         long temp = dequeArray[front];
         for (int i = 0; i < maxSize - 1; i++) {
             dequeArray[i] = dequeArray[i + 1];
         }
         rear--;
         nItems--;
+        if (nItems == 0) {
+            leftOpen = true;
+            rightOpen = true;
+        }
         return temp;
     }
 
     public long removeRight() {                // take item from back of queue
+        if (nItems == maxSize) {
+            leftOpen = false;
+            rightOpen = true;
+        }
         long temp = dequeArray[rear];
         rear--;
         nItems--;
+        if (nItems == 0) {
+            leftOpen = true;
+            rightOpen = true;
+        }
         return temp;
     }
 
@@ -69,10 +108,12 @@ public class Deque {
         return nItems;
     }
 
-    public void displayDequeContent() {
+    public String displayDequeContent() {
+        String list = "Contents: ";
         for (int i = 0; i < nItems; i++) {
-            System.out.println("List: " + dequeArray[(front + i) % nItems]);
+             list += ((dequeArray[(front + i) % nItems]) + " ");
         }
+        return list;
     }
 
 }
