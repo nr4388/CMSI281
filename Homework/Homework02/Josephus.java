@@ -1,3 +1,11 @@
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  File name     :  Josephus.java
+ *  Purpose       :  Circuar linked list file turned into file to do the Josephus problem.
+ *  Author        :  Nicolas Raymundo
+ *  Date          :  10-17-2018
+ *  Description   :  Added elimination method to do the Josephus problem.
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 public class Josephus {
     private Node current;
     private int size;
@@ -18,17 +26,6 @@ public class Josephus {
             newNode.next = current;
         }
         size++;
-    }
-
-    public void delete() {
-        if (getSize() == 1) {
-            current = null;
-            size--;
-        } else {
-            Iterator pointer = getIteratorAt(getSize() - 2);
-            pointer.currentNode.next = pointer.currentNode.next.next;
-            size--;
-        }
     }
 
     public void deleteAt(int index) {
@@ -80,23 +77,6 @@ public class Josephus {
         }
         Iterator pointer = getIteratorAt(index);
         return pointer.getCurrentInt();
-    }
-
-    public String display() {
-        if (getSize() == 0) {
-            return null;
-        }
-        String list = "";
-        Iterator pointer = getIteratorAt(0);
-        for (int i = 0; i < getSize(); i++) {
-            if (i < (getSize() - 1)) {
-                list += (pointer.getCurrentInt() + ", ");
-            } else {
-                list += (pointer.getCurrentInt());
-            }
-            pointer.step();
-        }
-        return list;
     }
 
     public int getSize() {
