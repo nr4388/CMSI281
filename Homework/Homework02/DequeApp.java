@@ -15,9 +15,7 @@ public class DequeApp {
         theDeque.insertLeft(11);
         theDeque.insertLeft(98);                                                    // 98, 11, 13, 12
 
-        System.out.println("Starting " + theDeque.displayDequeContent());           // 98, 11, 13, 12
-
-        System.out.println("\n");
+        System.out.println("Starting " + theDeque.displayDequeContent() + "\n");    // 98, 11, 13, 12
 
         System.out.println("Inserting right. Expected: Deque is full.");
         theDeque.insertRight(12);                                                   // Deque is full
@@ -29,7 +27,7 @@ public class DequeApp {
         System.out.println(theDeque.displayDequeContent()+ "\n");                   // 98 11 13
 
         System.out.println("Inserting left. Expected: 98 11 13 76");
-        theDeque.insertRight(76);                                                   // 98 11 13 76
+        theDeque.insertRight(76);
         System.out.println(theDeque.displayDequeContent()+ "\n");                   // 98 11 13 76
 
         System.out.println("Inserting left. Expected: Deque is full.");
@@ -65,12 +63,20 @@ public class DequeApp {
         System.out.println(theDeque.displayDequeContent()+ "\n");                   // 14 32
 
         System.out.println("Inserting left. Expected: 52 14 32");
-        theDeque.insertRight(52);                                                   // 98 11 13 76
+        theDeque.insertRight(52);
         System.out.println(theDeque.displayDequeContent()+ "\n");                   // 52 14 32
 
         System.out.println("Inserting left. Expected: 79 52 14 32");
-        theDeque.insertRight(79);                                                   // 98 11 13 76
+        theDeque.insertRight(79);
         System.out.println(theDeque.displayDequeContent()+ "\n");                   // 79 52 14 32
+
+        System.out.println("Removing left. Expected: 52 14 32");
+        theDeque.removeLeft();
+        System.out.println(theDeque.displayDequeContent()+ "\n");                   // 52 14 32
+
+        System.out.println("Inserting right. Expected: 42 52 14 32");
+        theDeque.insertRight(42);
+        System.out.println(theDeque.displayDequeContent()+ "\n");                   // 42 52 14 32
 
     }
 }
