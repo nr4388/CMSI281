@@ -37,7 +37,7 @@ public class Deque {
     public void insertLeft(long j) {          // put item at front of queue
         if (nItems == maxSize) {
             System.out.println("Deque is full. Please remove first");
-        } else if (leftOpen == false){
+        } else if (!leftOpen){
             insertRight(j);
         } else if (nItems == (maxSize - 1)) {
             leftOpen = false;
@@ -52,7 +52,7 @@ public class Deque {
     public void insertRight(long j) {          // put item at rear of queue
         if (nItems == maxSize) {
             System.out.println("Deque is full. Please remove first");
-        } else if (rightOpen == false && leftOpen) {
+        } else if (!rightOpen && leftOpen) {
             insertLeft(j);
         } else if ((nItems == (maxSize - 1)) && (rightOpen)) {
             rightOpen = false;
