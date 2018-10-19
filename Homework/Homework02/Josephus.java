@@ -53,7 +53,6 @@ public class Josephus {
                         eliminated += (pointer.getCurrentInt() + " ");
                         pointer.currentNode.data = 0;
                         myCircle.size--;
-                        // myCircle.size--;
                         pointer.step();
                     } else {
                         pointer.step();
