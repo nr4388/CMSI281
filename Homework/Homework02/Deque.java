@@ -38,8 +38,7 @@ public class Deque {
             dequeArray[front] = j;
             nItems++;
             rear++;
-        }
-        else {
+        } else {
             for (int i = maxSize - 1; i > front; i--) {
                 dequeArray[i] = dequeArray[i - 1];
             }
@@ -52,9 +51,9 @@ public class Deque {
     public void insertRight(long j) {          // put item at rear of queue
         if (nItems == maxSize) {
             System.out.println("Deque is full. Please remove first");
-        } else if (rightOpen == false && leftOpen == true) {
+        } else if (rightOpen == false && leftOpen) {
             insertLeft(j);
-        } else if ((nItems == (maxSize - 1)) && (rightOpen == true)) {
+        } else if ((nItems == (maxSize - 1)) && (rightOpen)) {
             rightOpen = false;
             rear++;
             dequeArray[rear] = j;
