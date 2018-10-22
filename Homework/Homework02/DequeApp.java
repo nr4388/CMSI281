@@ -36,10 +36,10 @@ public class DequeApp {
         System.out.println("\n");
 
         System.out.println("Clearing array. Expected: Empty deque");
-        theDeque.removeRight();
-        theDeque.removeRight();
-        theDeque.removeRight();
-        theDeque.removeRight();
+        theDeque.removeLeft();
+        theDeque.removeLeft();
+        theDeque.removeLeft();
+        theDeque.removeLeft();
         System.out.println(theDeque.displayDequeContent()+ "\n");                   // Empty deque
 
         System.out.println("Inserting values. Expected: 99 14 32 42");
@@ -70,13 +70,15 @@ public class DequeApp {
         theDeque.insertRight(79);
         System.out.println(theDeque.displayDequeContent()+ "\n");                   // 79 52 14 32
 
-        System.out.println("Removing left. Expected: 52 14 32");
+        System.out.println("Removing left. Expected: 14 32");
         theDeque.removeLeft();
-        System.out.println(theDeque.displayDequeContent()+ "\n");                   // 52 14 32
+        theDeque.removeLeft();
+        System.out.println(theDeque.displayDequeContent()+ "\n");                   // 14 32
 
-        System.out.println("Inserting right. Expected: 42 52 14 32");
+        System.out.println("Inserting right twice. Expected: 27 42 14 32");
         theDeque.insertRight(42);
-        System.out.println(theDeque.displayDequeContent()+ "\n");                   // 42 52 14 32
+        theDeque.insertRight(27);
+        System.out.println(theDeque.displayDequeContent()+ "\n");                   // 27 42 14 32
 
     }
 }
