@@ -22,7 +22,6 @@ public class IntQueue {
 
       // Peek at top of the queue
       public int peek() {
-          // return myQueue.getIteratorAt(myQueue.getSize() - 1).getCurrentInt();
           if (myQueue.getSize() == 0) {
               throw new IllegalArgumentException("Queue is empty.");
           } else {
