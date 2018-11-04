@@ -39,16 +39,16 @@ public class SimonGame {
 
        System.out.println("Enter the letters in the order in which they appeared.");
        Scanner myInput = new Scanner( System.in );
-       String inputName = myInput.nextLine();
+       String inputName = myInput.nextLine().toUpperCase();
 
        if (compare(inputName)) {
            System.out.println("Correct.");
        } else {
-           System.out.println("Loser.");
+           System.out.println("Loser. You're trash lmao.");
        }
 
        try {
-           Thread.sleep(500);
+           Thread.sleep(800);
        }
        catch (InterruptedException ex) {
        }
@@ -64,7 +64,7 @@ public class SimonGame {
    public String listToString() {
        String listString = "";
        for (int i = 0; i < simonList.getSize(); i++) {
-           listString += showNodeValue(i);
+           listString += getNodeValue(i);
        }
        return listString;
    }
@@ -76,13 +76,17 @@ public class SimonGame {
        return comparison;
    }
 
+   public String getNodeValue(int index) {
+       return simonList.getIteratorAt(index).getCurrentInt();
+   }
+
    public String showNodeValue(int index) {
-       // try {
-       //     Thread.sleep(500);
-       // }
-       // catch (InterruptedException ex) {
-       //
-       // }
+       try {
+           Thread.sleep(500);
+       }
+       catch (InterruptedException ex) {
+
+       }
        return simonList.getIteratorAt(index).getCurrentInt();
    }
 
