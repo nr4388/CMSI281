@@ -29,13 +29,7 @@ public class SimonGame {
            System.out.println(showNodeValue(i));
        }
 
-       try {
-           Thread.sleep(1000);
-       }
-       catch (InterruptedException ex) {
-       }
-
-       System.out.print("\033[H\033[2J");
+       delayPrint(1000);
 
        System.out.println("Enter the letters in the order in which they appeared.");
        Scanner myInput = new Scanner( System.in );
@@ -47,18 +41,21 @@ public class SimonGame {
            System.out.println("Loser. You're trash lmao.");
        }
 
-       try {
-           Thread.sleep(800);
-       }
-       catch (InterruptedException ex) {
-       }
-
-       System.out.print("\033[H\033[2J");
+       delayPrint(800);
 
        if (compare(inputName)) {
            level++;
            playRound();
        }
+   }
+
+   public void delayPrint(int delay) {
+       try {
+           Thread.sleep(delay);
+       }
+       catch (InterruptedException ex) {
+       }
+       System.out.print("\033[H\033[2J");
    }
 
    public String listToString() {
@@ -92,14 +89,7 @@ public class SimonGame {
 
    public static void main( String[] args ) {
        SimonGame mainList = new SimonGame();
-       // mainList.addToList();
        mainList.playRound();
-       // if (mainList.comparison) {
-       //     mainList.level++;
-       //     mainList.playRound();
-       // } else {
-       //     System.out.println("Loser");
-       // }
    }
 
 }
