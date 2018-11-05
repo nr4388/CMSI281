@@ -11,6 +11,11 @@ public class SimonGame {
       simonList = new StringLinkedList();
    }
 
+   public void clearList() {
+       simonList.clearLinkedList();
+       simonList.size = 0;
+   }
+
    public String getNewColor() {
        Random ran = new Random();
        int index = ran.nextInt(simonArray.length);
@@ -24,38 +29,53 @@ public class SimonGame {
    public void playRound() {
        addToList();
        System.out.println("Level: " + level);
-       System.out.println("Watch the order...");
-       for (int i = 0; i < simonList.getSize(); i++) {
-           System.out.println(showNodeValue(i));
-       }
+       delayPrint(800, false);
+       System.out.println("Pay close attention to the order in which the colors are printed.");
 
-       delayPrint(1000);
+       delayPrint(1000, false);
+
+       showNodeValue();
+
+       delayPrint(500, false);
 
        System.out.println("Enter the letters in the order in which they appeared.");
-       Scanner myInput = new Scanner( System.in );
-       String inputName = myInput.nextLine().toUpperCase();
+       Scanner userGuesses = new Scanner( System.in );
+       String guessesString = userGuesses.nextLine().toUpperCase().replaceAll("\\s+","");
 
-       if (compare(inputName)) {
-           System.out.println("Correct.");
+       if (compare(guessesString)) {
+           delayPrint(300, false);
+           System.out.println("\nCorrect!");
+           delayPrint(800, true);
        } else {
-           System.out.println("Loser. You're trash lmao.");
+           delayPrint(300, false);
+           System.out.println("\nSorry, you'll get it next time! Would you like to play again?");
+           System.out.println("Enter YES to play again or any other key to end the game.");
+           Scanner playAgain = new Scanner( System.in );
+           String playAgainString = userGuesses.nextLine().toUpperCase().replaceAll("\\s+","");
+           if (playAgainString.equals("YES")) {
+               delayPrint(500, true);
+               level = 1;
+               clearList();
+               playRound();
+           }
+           delayPrint(500, true);
        }
 
-       delayPrint(800);
-
-       if (compare(inputName)) {
+       if (compare(guessesString)) {
            level++;
            playRound();
        }
    }
 
-   public void delayPrint(int delay) {
+   public void delayPrint(int delay, boolean clearConsole) {
        try {
            Thread.sleep(delay);
        }
        catch (InterruptedException ex) {
        }
-       System.out.print("\033[H\033[2J");
+       if (clearConsole) {
+           System.out.print("\033[H\033[2J");
+       }
    }
 
    public String listToString() {
@@ -67,6 +87,7 @@ public class SimonGame {
    }
 
    public boolean compare(String guess) {
+       comparison = true;
        if (!(guess.equals(listToString()))) {
            comparison = false;
        }
@@ -77,14 +98,33 @@ public class SimonGame {
        return simonList.getIteratorAt(index).getCurrentInt();
    }
 
-   public String showNodeValue(int index) {
-       try {
-           Thread.sleep(500);
+   public void showNodeValue() {
+       String displayList = "";
+       String deleteLine = "";
+       for (int i = 0; i < simonList.getSize(); i++) {
+           if (i == 0) {
+               displayList += simonList.getIteratorAt(i).getCurrentInt();
+           } else {
+               displayList += (" " + simonList.getIteratorAt(i).getCurrentInt());
+           }
        }
-       catch (InterruptedException ex) {
+       for (int index = 0; index < displayList.length(); index++) {
+           System.out.print(displayList.charAt(index));
+           try {
+               Thread.sleep(500);
+           }
+           catch (InterruptedException ex) {
 
+           }
        }
-       return simonList.getIteratorAt(index).getCurrentInt();
+       for (int length = 0; length < displayList.length(); length++) {
+           deleteLine += "\b";
+       }
+       for (int length = 0; length < displayList.length(); length++) {
+           deleteLine += " ";
+       }
+       System.out.print(deleteLine);
+       System.out.print("\n");
    }
 
    public static void main( String[] args ) {
