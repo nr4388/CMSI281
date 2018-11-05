@@ -1,3 +1,11 @@
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  File name     :  SimonGame.java
+ *  Purpose       :  Utilized a linkedlist class to make a form of the Simon game.
+ *  Author        :  Nicolas Raymundo, Talia Bahar, Maya Pegler
+ *  Date          :  11-05-2018
+ *  Description   :  Added methods and a constructor to be able to play the game from console.
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 import java.util.*;
 
 public class SimonGame {

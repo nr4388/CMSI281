@@ -1,6 +1,11 @@
-// bubbleSort.java
-// demonstrates bubble sort
-// to run this program: C>java BubbleSortApp ////////////////////////////////////////////////////////////////
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  File name     :  bubbleSort.java
+ *  Purpose       :  Created a EvenOddSort method from a bubbleSort.java file.
+ *  Author        :  Nicolas Raymundo, Talia Bahar, Maya Pegler
+ *  Date          :  11-05-2018
+ *  Description   :  Took a bubbleSort method and turned it into a EvenOddSort method.
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 class ArrayBub {
     private long[] a; // ref to array a private
     int nElems; // number of data items

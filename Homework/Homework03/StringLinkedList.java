@@ -1,9 +1,9 @@
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- *  File name     :  IntLinkedList.java
- *  Purpose       :  Implementing linked list manipulation to get familiar with linked lists in java.
- *  Author        :  Nicolas Raymundo
- *  Date          :  09-18-2018
- *  Description   :  Implemented various methods to add and remove various nodes from a linked list.
+ *  File name     :  StringLinkedList.java
+ *  Purpose       :  Linked list class we can use for SimonGame.java.
+ *  Author        :  Nicolas Raymundo, Talia Bahar, Maya Pegler
+ *  Date          :  11-05-2018
+ *  Description   :  Basic linkedlist class but added a clear list method.
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 public class StringLinkedList {

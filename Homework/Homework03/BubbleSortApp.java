@@ -1,3 +1,11 @@
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  File name     :  bubbleSortApp.java
+ *  Purpose       :  Tester for bubbleSort.java file.
+ *  Author        :  Nicolas Raymundo, Talia Bahar, Maya Pegler
+ *  Date          :  11-05-2018
+ *  Description   :  Edited tests for bubbleSort to work with EvenOddSort.
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 class BubbleSortApp {
     public static void main(String[] args) {
         int maxSize = 100;
