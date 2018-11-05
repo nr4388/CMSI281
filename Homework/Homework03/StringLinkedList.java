@@ -9,7 +9,7 @@
 public class StringLinkedList {
 
    private Node head;
-   private int  size;
+   public int  size;
 
    public void insertAt(int index, String dataValue) {
        if ((index > size - 1) || (index < 0)) {
@@ -30,12 +30,19 @@ public class StringLinkedList {
        if (index == 0) {
            Iterator nodeTracker = getIteratorAt(index);
            head = head.next;
+           size--;
            return nodeTracker.getCurrentInt();
        } else {
            Iterator nodeTracker = getIteratorAt(index - 1);
            nodeTracker.currentNode.next = nodeTracker.currentNode.next.next;
+           size--;
            return nodeTracker.getCurrentInt();
        }
+   }
+
+   public void clearLinkedList() {
+       // Iterator nodeTracker = getIteratorAt(0);
+       head = null;
    }
 
    // the constructor
