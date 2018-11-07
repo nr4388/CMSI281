@@ -6,6 +6,16 @@
  *  Description   :  Added methods and a constructor to be able to play the game from console.
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+ /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  *  How to play game:
+  *     After starting game in cmd line, game will prompt you with instructions.
+  *     The first color will then show, and prompty disappear.
+  *     Type in the color that appeared when prompted. The game is NOT case-sensitive,
+  *     and does not require the inclusion of spaces (" ").
+  *     Game will say whether you got it right or wrong. If correct, new level will begin.
+  *     If wrong, a prompt will ask you if you would like to begin a new game or finish.
+  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 import java.util.*;
 
 public class SimonGame {
@@ -57,7 +67,7 @@ public class SimonGame {
        } else {
            delayPrint(300, false);
            System.out.println("\nSorry, you'll get it next time! Would you like to play again?");
-           System.out.println("Enter YES to play again or any other key to end the game.");
+           System.out.println("Type YES to play again or press the ENTER key to end the game.");
            Scanner playAgain = new Scanner( System.in );
            String playAgainString = userGuesses.nextLine().toUpperCase().replaceAll("\\s+","");
            if (playAgainString.equals("YES")) {
@@ -88,7 +98,7 @@ public class SimonGame {
 
    public String listToString() {
        String listString = "";
-       for (int i = 0; i < simonList.getSize(); i++) {
+       for (int i = simonList.getSize() - 1; i >= 0; i--) {
            listString += getNodeValue(i);
        }
        return listString;
@@ -111,9 +121,9 @@ public class SimonGame {
        String deleteLine = "";
        for (int i = 0; i < simonList.getSize(); i++) {
            if (i == 0) {
-               displayList += simonList.getIteratorAt(i).getCurrentInt();
+               displayList += (simonList.getIteratorAt(i).getCurrentInt());
            } else {
-               displayList += (" " + simonList.getIteratorAt(i).getCurrentInt());
+               displayList = simonList.getIteratorAt(i).getCurrentInt() + " " + displayList;
            }
        }
        for (int index = 0; index < displayList.length(); index++) {
