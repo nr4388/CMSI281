@@ -29,21 +29,29 @@ public class SimonGame {
       simonList = new StringLinkedList();
    }
 
+   // Clears linked list
    public void clearList() {
        simonList.clearLinkedList();
        simonList.size = 0;
    }
 
+   // Retrieves random color from array simonArray
    public String getNewColor() {
        Random ran = new Random();
        int index = ran.nextInt(simonArray.length);
        return simonArray[index];
    }
 
+   // Adds new node to list.
    public void addToList() {
-       simonList.prepend(getNewColor());
+       if (simonList.getSize() == 0) {
+           simonList.prepend(getNewColor());
+       } else {
+           simonList.append(getNewColor());
+       }
    }
 
+   // Plays a round of the game
    public void playRound() {
        addToList();
        System.out.println("Level: " + level);
@@ -85,6 +93,7 @@ public class SimonGame {
        }
    }
 
+   // Time delay and option to clear console.
    public void delayPrint(int delay, boolean clearConsole) {
        try {
            Thread.sleep(delay);
@@ -96,14 +105,19 @@ public class SimonGame {
        }
    }
 
+   // Turns linked list into a string for comparison
    public String listToString() {
        String listString = "";
-       for (int i = simonList.getSize() - 1; i >= 0; i--) {
+       // for (int i = simonList.getSize() - 1; i >= 0; i--) {
+       //     listString += getNodeValue(i);
+       // }
+       for (int i = 0; i < simonList.getSize(); i++) {
            listString += getNodeValue(i);
        }
        return listString;
    }
 
+   // Compares linked list to guess.
    public boolean compare(String guess) {
        comparison = true;
        if (!(guess.equals(listToString()))) {
@@ -112,10 +126,12 @@ public class SimonGame {
        return comparison;
    }
 
+   // Retrieves specified node value.
    public String getNodeValue(int index) {
        return simonList.getIteratorAt(index).getCurrentInt();
    }
 
+   // Shows and prompty deletes the values of the nodes in the list.
    public void showNodeValue() {
        String displayList = "";
        String deleteLine = "";
@@ -123,7 +139,7 @@ public class SimonGame {
            if (i == 0) {
                displayList += (simonList.getIteratorAt(i).getCurrentInt());
            } else {
-               displayList = simonList.getIteratorAt(i).getCurrentInt() + " " + displayList;
+               displayList += " " + simonList.getIteratorAt(i).getCurrentInt();
            }
        }
        for (int index = 0; index < displayList.length(); index++) {
@@ -146,8 +162,8 @@ public class SimonGame {
    }
 
    public static void main( String[] args ) {
-       SimonGame mainList = new SimonGame();
-       mainList.playRound();
+       SimonGame mainList = new SimonGame();    // Create new linked list.
+       mainList.playRound();                    // Play a round
    }
 
 }
