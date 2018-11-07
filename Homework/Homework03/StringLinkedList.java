@@ -62,6 +62,14 @@ public class StringLinkedList {
       size++;
    }
 
+   public void append( String dataToAdd ) {
+      // Node currentHead = head;
+      Node lastNode = new Node( dataToAdd );
+      Iterator nodeTracker = getIteratorAt(size - 1);
+      nodeTracker.currentNode.next = lastNode;
+      size++;
+   }
+
    private class Node {
 
       String data;            // remember this is an IntLinkedList
